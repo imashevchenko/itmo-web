@@ -1,7 +1,10 @@
+main{
+    padding: 10% 0 0 0;
+}
+
 body {
     background: #bcdee7;
     background-size: cover;
-    padding: 0;
     margin: 0;
     width: 100%;
     height: 100%;
@@ -46,6 +49,8 @@ footer {
 }
 
 header {
+    position: absolute;
+    width: 100%;
     background-color: #24bfde
 }
 
