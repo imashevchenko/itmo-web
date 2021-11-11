@@ -7,12 +7,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Шевченко Арсений">
+    <script src="load_time.js"> </script>
 </head>
 
 <body>
 
 <header>
-    <nav><a href="#galery">Галерея</a></nav>
+    <div class="nav">
+    <nav><a href="#galery">Галерея </a></nav>
+    <nav><a href="#table">Таблица</a></nav>
+    </div>
     <h1>Шевченко Арсений</h1>
     <h2>
         <time>22.04.2002</time>
@@ -20,7 +24,8 @@
 </header>
 
 <main>
-    <section>
+    <section class="profile">
+    <div>
         <img class="center" src="img/me.jpg">
         <pre id="symbol">
 ⠄⢀⣴⠃⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠘⣦⡀⠄
@@ -40,8 +45,8 @@
 
 </pre>
 
-    </section>
-    <section>
+    </div>
+    <div>
         <h3>Общая информация</h3>
         <h4>Навыки</h4>
         <ul>
@@ -74,9 +79,10 @@
             <cite> Арсений Шевченко: </cite> <q id="math">Успех=log<sub>10</sub>(Усердия)</q>
         </article>
 
+    </div>
     </section>
+    <h2>Галерея</h2>
     <section class="galery" id="galery">
-        <h2>Галерея</h2>
         <div class="galery">
             <h3>Школа</h3>
             <img class="galery_image" src="img/sch.jpg">
@@ -84,6 +90,35 @@
         <div class="galery">
             <h3>Университет</h3>
             <img class="galery_image" src="img/ITMO.jpg">
+        </div>
+    </section>
+
+    <section class="table" id="table">
+        <h2 class="table">Виски</h2>
+        <hr class="table_upperline">
+        <div class="grid">
+            <div>Название</div>
+            <div>Цена (winestyle.ru)</div>
+            <div>Выдержка</div>
+            <div>Тип</div>
+            <div>Macallan "Triple Cask Matured"</div>
+            <div>4 235 руб.</div>
+            <div>12 лет</div>
+            <div>Односолодовый</div>
+            <div>Highland park "Viking Honour"</div>
+            <div>3 809 руб.</div>
+            <div>12 лет</div>
+            <div>Односолодовый</div>
+            <div>Johnie Walker Black Label</div>
+            <div>3 832 руб.</div>
+            <div>12 лет</div>
+            <div>Купажированный</div>
+            <div>Hibiki Japanese Harmony</div>
+            <div>6 760 руб.</div>
+            <div>12</div>
+            <div>Купажированный</div>
+
+
         </div>
     </section>
 </main>
