@@ -191,6 +191,42 @@ cite {
     font-weight: lighter;
 }
 
+.delete{
+    width: 16px;
+}
+
+.border {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.border li {
+    font-family: "Roboto", serif;
+    text-align: center;
+    padding: 7px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 10px solid rgba(36, 191, 222, 0.78);
+    box-shadow: 2px -2px 5px 0 rgba(0,0,0,.1),
+    -2px -2px 5px 0 rgba(0,0,0,.1),
+    2px 2px 5px 0 rgba(0,0,0,.1),
+    -2px 2px 5px 0 rgba(0,0,0,.1);
+    font-size: 20px;
+    transition: 0.3s all linear;
+}
+
+input {
+    font-size: 13px;
+    padding: 6px 0 4px 10px;
+    border: 1px solid rgba(206, 206, 206, 0.52);
+    background: #F6F6f6;
+    border-radius: 8px;
+}
+
+
+
 @media screen and (min-width: 1440px) and (max-width: 1599px){
     .advertisement{
         font: 20px "Arial Black";

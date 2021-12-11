@@ -9,6 +9,7 @@
     <meta name="keywords" content="Шевченко Арсений">
     <script src="../js/load_time.js"></script>
     <script src="../js/nav_bar.js"></script>
+    <script src="../js/form.js"></script>
 </head>
 <body>
 
@@ -22,35 +23,21 @@
     <h1>Конструктор</h1>
 </header>
 <main class="small">
-    <form>
-        <h2>Создать расписание</h2>
+
+        <form onsubmit="newElement()">
+            <label for="input"></label><input type="text" id="input" placeholder="Новая задача" required>
+        </form>
         <div>
-            Число уроков <label>
-            <select name="lessons" required>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-            </select>
-        </label>
+            <ul id="tasks" class="border">
+                <template id="line">
+                    <li class ="taskLine">
+                        <br>
+                            <img src="../img/cross.png" class="delete">
+                            <img src="../img/tick.png" class="delete">
+                    </li>
+                </template>
+            </ul>
         </div>
-        <div>
-            Дней в неделе <label>
-            <select name="days" required>
-                <option value="5">Пятидневка</option>
-                <option value="6">Шестидневка</option>
-            </select>
-        </label>
-        </div>
-        <div>
-            Название школы <label>
-            <select name="school" required>
-                <option value="Школа №1">Школа №1</option>
-                <option value="Школа №2">Школа №2</option>
-            </select>
-        </label>
-        </div>
-        <input type="submit" value="Добавить">
-    </form>
 </main>
 <footer>
     <aside>©Copyright</aside>
