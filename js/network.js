@@ -1,33 +1,41 @@
-function users(){
+function users() {
     fetch('https://jsonplaceholder.typicode.com/users')
         .then((res) => res.json())
         .then((res) => {
+            shuffleArray(res);
             res.slice(0,4).forEach(user => {
-                let userName = document.createElement('div');
-                userName.className ='box';
 
-                let userUsername = document.createElement('div');
-                userUsername.className ='box';
-
-                let userPhone = document.createElement('div');
-                userPhone.className ='box';
-
-                let userCompany = document.createElement('div');
-                userCompany.className ='box';
-
-                userName.innerText=user.name;
-                userUsername.innerText=user.username;
-                userPhone.innerText=user.phone;
-                userCompany.innerText=user.company.name;
-
-                document.querySelector("section.loaded_table div.grid").append(userName);
-                document.querySelector("section.loaded_table div.grid").append(userUsername);
-                document.querySelector("section.loaded_table div.grid").append(userPhone);
-                document.querySelector("section.loaded_table div.grid").append(userCompany);
+                document.querySelector("section.loaded_table div.grid").append(boxBuilder(user.username));
+                document.querySelector("section.loaded_table div.grid").append(boxBuilder(user.phone));
+                document.querySelector("section.loaded_table div.grid").append(boxBuilder(user.company.name));
+                document.querySelector("section.loaded_table div.grid").append(boxBuilder(user.username));
             })
         })
+        .catch(() => {
+            document.querySelector('.error').style.display = 'block';
+        })
+        .finally(() => {
+            document.querySelector('.load').style.display = 'none';
+        })
+
 }
 
 window.addEventListener("load", () => {
     setTimeout(users, 2000);
 });
+
+function boxBuilder(innerText) {
+    let tmp = document.createElement('div');
+    tmp.className = 'box';
+    tmp.innerText = innerText;
+    return tmp;
+}
+
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}

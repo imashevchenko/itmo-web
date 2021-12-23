@@ -225,6 +225,15 @@ input {
     border-radius: 8px;
 }
 
+.error {
+    display: none;
+    width: 10%;
+}
+
+.load img{
+    height: 40%;
+    width: 40%;
+}
 
 
 @media screen and (min-width: 1440px) and (max-width: 1599px){
